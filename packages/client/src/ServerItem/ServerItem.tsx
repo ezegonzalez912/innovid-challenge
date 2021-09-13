@@ -14,14 +14,14 @@ const ServerItem:React.FC <Props> = ({ server }) => {
     const [serverState, setServerState] = useState<Boolean>(false)
     const [CPU, setCPU] = useState<number>(server.load)
 
-    const ref = useRef<any>();
+    const ref = useRef<ReturnType<typeof setInterval>>();
 
     useEffect(() => {
         ref.current && clearInterval(ref.current);
         if(serverState){
             ref.current = setInterval( () => (
                 getUsageCPU(server.id).then(res => setCPU(res.load))
-            ), 2000)
+            ), 5000)
         }else{
             setCPU(0)
         }
