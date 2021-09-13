@@ -1,4 +1,4 @@
-![Innovid](./assets/logo.jpg "Innovid")
+![Ejemplo](./assets/example.gif "Ejemplo")
 
 # Innovid challenge: Load balancer
 Tenemos que crear una aplicación que muestre la carga de nuestros servidores 1, 2, 3 y 4, lamentablemente nuestro backend no tiene implementado un método para obtenerlos todos al mismo tiempo así que hay que traerlos de a uno, en paralelo.
@@ -16,12 +16,10 @@ Tenemos que crear una aplicación que muestre la carga de nuestros servidores 1,
 * Typescript
 * Sass
 
-![Ejemplo](./assets/example.gif "Ejemplo")
-
 ## Corriendo el proyecto
 ```bash
 # Instalar dependencias de los paquetes
-git clone 
+git clone https://github.com/ezegonzalez912/innovid-challenge
 
 # Instalar dependencias del proyecto
 npm install
