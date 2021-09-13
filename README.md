@@ -16,7 +16,7 @@ Tenemos que crear una aplicación que muestre la carga de nuestros servidores 1,
 * Typescript
 * Sass
 
-![Ejemplo](./assets/exaple.gif "Ejemplo")
+![Ejemplo](./assets/example.gif "Ejemplo")
 
 ## Corriendo el proyecto
 ```bash
