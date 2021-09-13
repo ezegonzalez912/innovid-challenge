@@ -12,11 +12,11 @@ Tenemos que crear una aplicación que muestre la carga de nuestros servidores 1,
 * Puedo prender y apagar servidores (dejo de traerme su carga).
 
 ## Tenologias
-*React JS
-*Typescript
-*Sass
+* React JS
+* Typescript
+* Sass
 
-![Ejemplo](./assets/exaple.png "Ejemplo")
+![Ejemplo](./assets/exaple.gif "Ejemplo")
 
 ## Corriendo el proyecto
 ```bash
