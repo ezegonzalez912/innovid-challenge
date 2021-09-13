@@ -1,4 +1,5 @@
 export interface Server {
     id: number;
-    load: number;
+    state: Boolean;
+    visible: Boolean;
 }

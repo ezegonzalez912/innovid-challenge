@@ -18,6 +18,12 @@ body {
   color: #222;
 }
 
+@font-face {
+  font-family: W95FA;
+  src: url("./assets/W95FA.otf") format("truetype");
+}
+
 * {
   box-sizing: border-box;
+  font-family: W95FA;
 }
