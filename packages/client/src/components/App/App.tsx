@@ -10,13 +10,12 @@ import Task from "../Task";
 const App: React.FC = () => {
 
   const [servers, setServers] = useState<Server[]>([])
-
   const addServer = () => {
     if(servers.length === 6){
       return;
     }
     const newServer = {
-      id: servers.length + 1,
+      id: new Date().valueOf(),
       load: 0,
       state: false,
       visible: true
