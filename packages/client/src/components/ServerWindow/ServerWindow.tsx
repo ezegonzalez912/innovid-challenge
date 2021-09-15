@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import styles from "./ServerItem.module.scss";
+import styles from "./ServerWindow.module.scss";
 import serverOffIMG from "../../assets/pc-off.png"
 import serverOnIMG from "../../assets/pc-on.gif"
 import { getUsageCPU } from '../../services/getUsageCPU';
@@ -16,16 +16,19 @@ const ServerItem:React.FC <Props> = ({ server, serverMinimize, setInverseState, 
 
     const [usageCPU, setUsageCPU] = useState<number>(0)
 
-    const ref = useRef<ReturnType<typeof setInterval>>();
+    const ref = useRef<ReturnType<typeof setInterval>>(); //Dudas con el tipo de un setInterval en ts
 
     useEffect(() => {
         ref.current && clearInterval(ref.current);
         if(server.state && server.visible){
             ref.current = setInterval( () => {
                 getUsageCPU(server.id).then(res => setUsageCPU(res.load))
-            }, 2000)
+            }, 5000)
         }else{
             setUsageCPU(0)
+        }
+        return () => {
+            clearInterval(ref.current)
         }
     }, [server.state, server.visible])
 

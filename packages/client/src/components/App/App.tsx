@@ -1,15 +1,16 @@
 import * as React from "react";
 import { useState } from "react";
-import styles from "./App.module.scss";
-import ServerItem from "../ServerItem";
-import serverIMG from "../../assets/pc-off.png"
-import recycleIMG from "../../assets/recycleBin.png"
 import { Server } from "../../types/types";
-import Task from "../Task";
+import TaskBar from "../TaskBar";
+import ServerWindow from "../ServerWindow";
+import recycleIMG from "../../assets/recycleBin.png"
+import serverIMG from "../../assets/pc-off.png"
+import styles from "./App.module.scss";
 
 const App: React.FC = () => {
 
   const [servers, setServers] = useState<Server[]>([])
+  
   const addServer = () => {
     if(servers.length === 6){
       return;
@@ -34,7 +35,8 @@ const App: React.FC = () => {
   }
 
   const serverClosed = (id: number) => {
-    setServers((state: Server[]) => state.filter( server => server.id !== id))
+    const newServers = servers.filter( server => server.id !== id)
+    setServers(newServers)
   }
 
   return (
@@ -42,7 +44,7 @@ const App: React.FC = () => {
       <div className={styles.grid}>
       {
         servers.map( server => (
-          <ServerItem key={server.id} 
+          <ServerWindow key={server.id} 
             server={server}
             setInverseState={setInverseState} 
             serverMinimize={serverMinimize}
@@ -51,7 +53,7 @@ const App: React.FC = () => {
           ))
         }
       </div>
-      <div className={styles.app2}>
+      <div className={styles.app} style={{top: "30px"}}>
         <img src={recycleIMG} alt="Recycle"/>
         <p>Recycle Bin</p>
       </div>
@@ -59,7 +61,7 @@ const App: React.FC = () => {
         <img src={serverIMG} alt="server"/>
         <p>New Server</p>
       </div>
-      <Task servers={servers} serverMinimize={serverMinimize}/>
+      <TaskBar servers={servers} serverMinimize={serverMinimize}/>
     </main>
   );
 };

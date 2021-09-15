@@ -1,6 +1,6 @@
 import React from 'react'
 import { Server } from '../../types/types';
-import styles from "./Task.module.scss";
+import styles from "./TaskBar.module.scss";
 import serverIMG from "../../assets/pc-off.png"
 import startBTN from "../../assets/start-btn.png"
 

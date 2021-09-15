@@ -1,6 +1,6 @@
 .container {
   height: 50px;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -11,6 +11,12 @@
   box-sizing: border-box;
   position: absolute;
   bottom: 0;
+  overflow-x: scroll;
+  z-index: 999;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .start{
