@@ -18,12 +18,16 @@ Tenemos que crear una aplicación que muestre la carga de nuestros servidores 1,
 
 ## Corriendo el proyecto
 ```bash
-# Instalar dependencias de los paquetes
-git clone https://github.com/ezegonzalez912/innovid-challenge
-
 # Instalar dependencias del proyecto
 npm install
+
+# Instalar dependencias de los paquetes
+npm run bootstrap
 
 # Correr el servidor de desarrollo
 npm start
 ```
+
+Twitch: EzeGonzalez12_
+Discord: Eze Gonzalez#5104
+Contacto: ezegonzalez912@gmail.com
