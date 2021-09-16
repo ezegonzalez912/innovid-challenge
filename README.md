@@ -28,6 +28,7 @@ npm run bootstrap
 npm start
 ```
 
+## Información
 <b>Twitch:</b> EzeGonzalez12_ <br/>
 <b>Discord:</b> Eze Gonzalez#5104 <br/>
 <b>Contacto:</b> ezegonzalez912@gmail.com <br/>
